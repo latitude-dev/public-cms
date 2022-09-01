@@ -1,4 +1,4 @@
-export const Seo = {
+export default {
   title: "SEO / Share Settings",
   name: "seo",
   type: "object",
@@ -37,7 +37,7 @@ export const Seo = {
       title: "Share Title",
       name: "shareTitle",
       type: "string",
-      description: "Title used for social sharing cards.",
+      description: "TItle used for social sharing cards.",
       validation: (Rule) =>
         Rule.max(50).warning("Longer titles may be truncated by social sites"),
     },

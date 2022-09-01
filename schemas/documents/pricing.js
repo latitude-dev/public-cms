@@ -5,6 +5,11 @@ export default {
   title: "Pricing",
   type: "document",
   fields: [
+    {
+      title: "SEO / Share Settings",
+      name: "seo",
+      type: "seo",
+    },
     basicSchema({
       title: "Hero section",
       type: "object",
@@ -14,7 +19,7 @@ export default {
       },
       fields: [
         basicSchema({
-          title: "title",
+          title: "Title",
         }),
         basicSchema({
           title: "Main header",
