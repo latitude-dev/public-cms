@@ -68,6 +68,7 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Show signatures",
@@ -89,6 +90,7 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Images",
@@ -115,20 +117,27 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Images",
           type: "array",
           of: [
             basicSchema({
-              title: "Image",
-              type: "image",
-            }),
-            basicSchema({
-              title: "Name",
-            }),
-            basicSchema({
-              title: "Role",
+              title: "Employee",
+              type: "object",
+              fields: [
+                basicSchema({
+                  title: "Image",
+                  type: "image",
+                }),
+                basicSchema({
+                  title: "Name",
+                }),
+                basicSchema({
+                  title: "Role",
+                }),
+              ],
             }),
           ],
         }),
@@ -147,6 +156,7 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Values",
@@ -154,10 +164,17 @@ export default {
           validation: (Rule) => Rule.required().min(1).max(6),
           of: [
             basicSchema({
-              title: "Title",
-            }),
-            basicSchema({
-              title: "Description",
+              title: "Value",
+              type: "object",
+              fields: [
+                basicSchema({
+                  title: "Title",
+                }),
+                basicSchema({
+                  title: "Description",
+                  type: "text",
+                }),
+              ],
             }),
           ],
         }),
