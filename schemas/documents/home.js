@@ -36,7 +36,7 @@ export default {
     basicSchema({
       title: "Dynamic sections",
       type: "array",
-      validation: (Rule) => Rule.required().min(1).max(4),
+      validation: (Rule) => Rule.required().min(4).max(4),
       options: {
         collapsible: true,
         collapsed: true,
@@ -78,6 +78,8 @@ export default {
         basicSchema({
           title: "Cards",
           type: "array",
+          validation: (Rule) => Rule.required().min(5).max(5),
+
           of: [
             basicSchema({
               title: "Card",
