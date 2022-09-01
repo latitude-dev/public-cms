@@ -23,6 +23,7 @@ export default {
         }),
         basicSchema({
           title: "Main description",
+          type: "text",
         }),
         basicSchema({
           title: "Primary button",
@@ -35,20 +36,27 @@ export default {
     basicSchema({
       title: "Dynamic sections",
       type: "array",
-      validation: (Rule) => Rule.required().min(1).max(3),
+      validation: (Rule) => Rule.required().min(1).max(4),
       options: {
         collapsible: true,
         collapsed: true,
       },
       of: [
         basicSchema({
-          title: "Name",
-        }),
-        basicSchema({
-          title: "Title",
-        }),
-        basicSchema({
-          title: "Description",
+          title: "Section",
+          type: "object",
+          fields: [
+            basicSchema({
+              title: "Name",
+            }),
+            basicSchema({
+              title: "Title",
+            }),
+            basicSchema({
+              title: "Description",
+              type: "text",
+            }),
+          ],
         }),
       ],
     }),
@@ -65,16 +73,24 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Cards",
           type: "array",
           of: [
             basicSchema({
-              title: "Title",
-            }),
-            basicSchema({
-              title: "Description",
+              title: "Card",
+              type: "object",
+              fields: [
+                basicSchema({
+                  title: "Title",
+                }),
+                basicSchema({
+                  title: "Description",
+                  type: "text",
+                }),
+              ],
             }),
           ],
         }),
@@ -93,6 +109,7 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
       ],
     }),
