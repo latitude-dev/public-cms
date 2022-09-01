@@ -44,6 +44,9 @@ export default {
                   title: "Billing label",
                 }),
                 basicSchema({
+                  title: "Button label",
+                }),
+                basicSchema({
                   title: "Benefits",
                   type: "array",
                   of: [
@@ -76,7 +79,7 @@ export default {
           title: "Description",
         }),
         basicSchema({
-          title: "Button text",
+          title: "Button label",
         }),
       ],
     }),
@@ -128,9 +131,10 @@ export default {
     }),
   ],
   preview: {
-    select: {
-      title: "name",
-      media: "image",
+    prepare() {
+      return {
+        title: "Pricing page",
+      };
     },
   },
 };
