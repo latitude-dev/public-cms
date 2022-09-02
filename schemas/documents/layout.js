@@ -84,25 +84,31 @@ export default {
         }),
         basicSchema({
           title: "Social networks",
-          type: "object",
-          fields: [
+          type: "array",
+          of: [
             basicSchema({
-              title: "Twitter",
-              type: "url",
-            }),
-            basicSchema({
-              title: "LinkedIn",
-              type: "url",
-            }),
-            basicSchema({
-              title: "Slack",
-              type: "url",
+              title: "Social Network",
+              type: "object",
+              fields: [
+                basicSchema({
+                  title: "Name",
+                }),
+                basicSchema({
+                  title: "Logo",
+                  type: "image",
+                }),
+                basicSchema({
+                  title: "Link",
+                  type: "url",
+                }),
+              ],
             }),
           ],
         }),
         basicSchema({
           title: "Columns",
           type: "array",
+          validation: (Rule) => Rule.required().min(1).max(3),
           of: [
             basicSchema({
               title: "Footer block",
