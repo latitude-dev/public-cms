@@ -119,7 +119,7 @@ export default {
   preview: {
     prepare() {
       return {
-        title: "About page",
+        title: "Home page",
       };
     },
   },

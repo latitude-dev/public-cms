@@ -11,6 +11,8 @@ import pricing from "./documents/pricing";
 import about from "./documents/about";
 import layout from "./documents/layout";
 import home from "./documents/home";
+import { Button } from "./objects/button";
+import { PageLink } from "./objects/page-link";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,5 +30,7 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     seo,
+    Button,
+    PageLink,
   ]),
 });

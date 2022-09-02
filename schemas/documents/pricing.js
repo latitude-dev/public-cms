@@ -44,6 +44,7 @@ export default {
                 }),
                 basicSchema({
                   title: "Period",
+                  required: false,
                 }),
                 basicSchema({
                   title: "Billing label",

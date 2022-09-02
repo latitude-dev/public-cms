@@ -6,11 +6,71 @@ export default {
   type: "document",
   fields: [
     basicSchema({
-      title: "Footer",
+      title: "Header",
       type: "object",
       options: {
         collapsible: true,
         collapsed: false,
+      },
+      fields: [
+        basicSchema({
+          title: "Menu items",
+          name: "menuItems",
+          type: "array",
+          of: [
+            basicSchema({
+              type: "object",
+              title: "External link",
+              fields: [
+                basicSchema({
+                  title: "Label",
+                }),
+                basicSchema({
+                  title: "Link",
+                  type: "url",
+                }),
+              ],
+            }),
+            basicSchema({
+              type: "object",
+              title: "Internal link",
+              fields: [
+                basicSchema({
+                  type: "pageLink",
+                  title: "Internal link",
+                }),
+              ],
+            }),
+          ],
+        }),
+        basicSchema({
+          title: "Right actions",
+          type: "array",
+          of: [
+            basicSchema({
+              title: "Action",
+              type: "object",
+              fields: [
+                basicSchema({
+                  title: "Button style",
+                  type: "button",
+                }),
+                basicSchema({
+                  title: "Link",
+                  type: "url",
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    }),
+    basicSchema({
+      title: "Footer",
+      type: "object",
+      options: {
+        collapsible: true,
+        collapsed: true,
       },
       fields: [
         basicSchema({
@@ -41,7 +101,7 @@ export default {
           ],
         }),
         basicSchema({
-          title: "Links",
+          title: "Columns",
           type: "array",
           of: [
             basicSchema({
@@ -49,7 +109,11 @@ export default {
               type: "object",
               fields: [
                 basicSchema({
-                  title: "Link",
+                  title: "Name",
+                }),
+
+                basicSchema({
+                  title: "Links",
                   type: "array",
                   of: [
                     basicSchema({
@@ -66,12 +130,13 @@ export default {
                       ],
                     }),
                     basicSchema({
-                      title: "Page reference",
-                      type: "reference",
-                      to: [
-                        { type: "home" },
-                        { type: "pricing" },
-                        { type: "about" },
+                      type: "object",
+                      title: "Internal link",
+                      fields: [
+                        basicSchema({
+                          type: "pageLink",
+                          title: "Internal link",
+                        }),
                       ],
                     }),
                   ],
