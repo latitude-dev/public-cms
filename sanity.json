@@ -24,6 +24,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./desk-structure.js"
+    },
+    {
+      "implements": "part:@sanity/base/new-document-structure",
+      "path": "./doc-structure.js"
     }
   ]
 }
