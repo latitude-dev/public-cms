@@ -1,6 +1,6 @@
 import { basicSchema } from "../../lib/helpers";
 
-export const Button = basicSchema({
+const button = basicSchema({
   type: "object",
   title: "button",
   fields: [
@@ -19,3 +19,5 @@ export const Button = basicSchema({
     }),
   ],
 });
+
+export default button;

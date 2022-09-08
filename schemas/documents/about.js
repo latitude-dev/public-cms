@@ -28,151 +28,176 @@ export default {
           title: "Main description",
         }),
         basicSchema({
+          title: "Sticker",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
+        basicSchema({
           title: "Images",
           type: "array",
-          validation: (Rule) => Rule.required().max(4),
+          validation: (Rule) => Rule.required().max(4).min(4),
           of: [
             basicSchema({
-              title: "Pricing",
-              type: "object",
+              title: "image",
+              type: "image",
               fields: [
-                basicSchema({
-                  title: "High resolution image",
-                  type: "image",
-                }),
-                basicSchema({
-                  title: "Low resolution image",
-                  type: "image",
-                }),
                 basicSchema({
                   title: "Is landscape",
                   type: "boolean",
                   initialValue: false,
+                  required: false,
+                }),
+              ],
+              options: {
+                metadata: ["lqip"],
+              },
+            }),
+          ],
+        }),
+      ],
+    }),
+    basicSchema({
+      title: "Body",
+      type: "array",
+      of: [
+        basicSchema({
+          title: "Mission section",
+          type: "object",
+          options: {
+            collapsible: true,
+            collapsed: true,
+          },
+          fields: [
+            basicSchema({
+              title: "Title",
+            }),
+            basicSchema({
+              title: "Description",
+              type: "basicBlock",
+            }),
+            basicSchema({
+              title: "Signatures",
+              type: "array",
+              validation: (Rule) => Rule.max(2),
+              of: [
+                basicSchema({
+                  title: "image",
+                  type: "image",
+                  options: {
+                    metadata: ["lqip"],
+                  },
                 }),
               ],
             }),
           ],
         }),
-      ],
-    }),
-    basicSchema({
-      title: "Mission section",
-      type: "object",
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-      fields: [
         basicSchema({
-          title: "Title",
-        }),
-        basicSchema({
-          title: "Description",
-          type: "text",
-        }),
-        basicSchema({
-          title: "Show signatures",
-          type: "boolean",
-          initialValue: true,
-        }),
-      ],
-    }),
-    basicSchema({
-      title: "Place section",
-      type: "object",
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-      fields: [
-        basicSchema({
-          title: "Title",
-        }),
-        basicSchema({
-          title: "Description",
-          type: "text",
-        }),
-        basicSchema({
-          title: "Images",
-          type: "array",
-          of: [
+          title: "Place section",
+          type: "object",
+          options: {
+            collapsible: true,
+            collapsed: true,
+          },
+          fields: [
             basicSchema({
-              title: "Image",
-              type: "image",
+              title: "Title",
             }),
-          ],
-        }),
-      ],
-    }),
-    basicSchema({
-      title: "Team section",
-      type: "object",
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-      fields: [
-        basicSchema({
-          title: "Title",
-        }),
-        basicSchema({
-          title: "Description",
-          type: "text",
-        }),
-        basicSchema({
-          title: "Images",
-          type: "array",
-          of: [
             basicSchema({
-              title: "Employee",
-              type: "object",
-              fields: [
+              title: "Description",
+              type: "basicBlock",
+            }),
+            basicSchema({
+              title: "Images",
+              type: "array",
+              validation: (Rule) => Rule.max(4).min(4),
+              of: [
                 basicSchema({
                   title: "Image",
                   type: "image",
-                }),
-                basicSchema({
-                  title: "Name",
-                }),
-                basicSchema({
-                  title: "Role",
+                  options: {
+                    metadata: ["lqip"],
+                  },
                 }),
               ],
             }),
           ],
         }),
-      ],
-    }),
-    basicSchema({
-      title: "Values section",
-      type: "object",
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-      fields: [
         basicSchema({
-          title: "Title",
-        }),
-        basicSchema({
-          title: "Description",
-          type: "text",
-        }),
-        basicSchema({
-          title: "Values",
-          type: "array",
-          validation: (Rule) => Rule.required().min(1).max(6),
-          of: [
+          title: "Team section",
+          type: "object",
+          options: {
+            collapsible: true,
+            collapsed: true,
+          },
+          fields: [
             basicSchema({
-              title: "Value",
-              type: "object",
-              fields: [
+              title: "Title",
+            }),
+            basicSchema({
+              title: "Description",
+              type: "basicBlock",
+            }),
+            basicSchema({
+              title: "Employees",
+              type: "array",
+              of: [
                 basicSchema({
-                  title: "Title",
+                  title: "Employee",
+                  type: "object",
+                  fields: [
+                    basicSchema({
+                      title: "Image",
+                      type: "image",
+                      options: {
+                        metadata: ["lqip"],
+                      },
+                    }),
+                    basicSchema({
+                      title: "Name",
+                    }),
+                    basicSchema({
+                      title: "Role",
+                    }),
+                  ],
                 }),
+              ],
+            }),
+          ],
+        }),
+        basicSchema({
+          title: "Values section",
+          type: "object",
+          options: {
+            collapsible: true,
+            collapsed: true,
+          },
+          fields: [
+            basicSchema({
+              title: "Title",
+            }),
+            basicSchema({
+              title: "Description",
+              type: "basicBlock",
+            }),
+            basicSchema({
+              title: "Values",
+              type: "array",
+              validation: (Rule) => Rule.required().min(1).max(6),
+              of: [
                 basicSchema({
-                  title: "Description",
-                  type: "text",
+                  title: "Value",
+                  type: "object",
+                  fields: [
+                    basicSchema({
+                      title: "Title",
+                    }),
+                    basicSchema({
+                      title: "Description",
+                      type: "text",
+                    }),
+                  ],
                 }),
               ],
             }),

@@ -1,7 +1,9 @@
 import { basicSchema } from "../../lib/helpers";
 
-export const PageLink = basicSchema({
+const pageLink = basicSchema({
   title: "Page Link",
   type: "reference",
   to: [{ type: "home" }, { type: "pricing" }, { type: "about" }],
 });
+
+export default pageLink;

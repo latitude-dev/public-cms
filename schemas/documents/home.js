@@ -29,7 +29,15 @@ export default {
           title: "Primary button",
         }),
         basicSchema({
+          title: "Primary button link",
+          type: "url",
+        }),
+        basicSchema({
           title: "Secondary button",
+        }),
+        basicSchema({
+          title: "Secondary button link",
+          type: "url",
         }),
       ],
     }),
@@ -46,6 +54,13 @@ export default {
           title: "Section",
           type: "object",
           fields: [
+            basicSchema({
+              title: "Logo",
+              type: "image",
+              options: {
+                metadata: ["lqip"],
+              },
+            }),
             basicSchema({
               title: "Name",
             }),
@@ -69,6 +84,13 @@ export default {
       },
       fields: [
         basicSchema({
+          title: "Logo",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
+        basicSchema({
           title: "Title",
         }),
         basicSchema({
@@ -79,7 +101,6 @@ export default {
           title: "Cards",
           type: "array",
           validation: (Rule) => Rule.required().min(5).max(5),
-
           of: [
             basicSchema({
               title: "Card",
@@ -91,6 +112,13 @@ export default {
                 basicSchema({
                   title: "Description",
                   type: "text",
+                }),
+                basicSchema({
+                  title: "Image",
+                  type: "image",
+                  options: {
+                    metadata: ["lqip"],
+                  },
                 }),
               ],
             }),
@@ -106,6 +134,13 @@ export default {
         collapsed: true,
       },
       fields: [
+        basicSchema({
+          title: "Logo",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
         basicSchema({
           title: "Title",
         }),

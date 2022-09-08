@@ -1,6 +1,6 @@
 import { basicSchema } from "../../lib/helpers";
 
-export const BasicBlock = basicSchema({
+const basicBlock = basicSchema({
   type: "array",
   title: "Basic block",
   of: [
@@ -23,3 +23,5 @@ export const BasicBlock = basicSchema({
     },
   ],
 });
+
+export default basicBlock;

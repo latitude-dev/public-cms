@@ -14,6 +14,13 @@ export default {
       },
       fields: [
         basicSchema({
+          title: "Logo",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
+        basicSchema({
           title: "Menu items",
           name: "menuItems",
           type: "array",
@@ -78,9 +85,21 @@ export default {
         }),
         basicSchema({
           title: "Description",
+          type: "text",
         }),
         basicSchema({
           title: "Button label",
+        }),
+        basicSchema({
+          title: "Button link",
+          type: "url",
+        }),
+        basicSchema({
+          title: "Logo",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
         }),
         basicSchema({
           title: "Social networks",

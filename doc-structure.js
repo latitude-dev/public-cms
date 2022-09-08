@@ -1,6 +1,6 @@
 import S from "@sanity/base/structure-builder";
 
-const singletons = ["home", "about", "pricing"];
+const singletons = ["home", "about", "pricing", "layout"];
 
 export default [
   ...S.defaultInitialValueTemplateItems().filter(

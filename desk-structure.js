@@ -28,4 +28,12 @@ export default () =>
             .documentId("1b8efa64-9caa-47dd-b97b-9748c64fda1f")
             .views([S.view.form()])
         ),
+      S.listItem()
+        .title("Layout")
+        .child(
+          S.document()
+            .schemaType("layout")
+            .documentId("98dd392b-2642-43a1-92e1-9253576aae29")
+            .views([S.view.form()])
+        ),
     ]);

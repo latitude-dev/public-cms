@@ -53,6 +53,10 @@ export default {
                   title: "Button label",
                 }),
                 basicSchema({
+                  title: "Button link",
+                  type: "url",
+                }),
+                basicSchema({
                   title: "Benefits",
                   type: "array",
                   of: [
@@ -86,6 +90,10 @@ export default {
         }),
         basicSchema({
           title: "Button label",
+        }),
+        basicSchema({
+          title: "Button link",
+          type: "url",
         }),
       ],
     }),

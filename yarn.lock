@@ -1819,19 +1819,9 @@
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
 
-"@sanity/types@2.31.1":
+"@sanity/types@2.31.1", "@sanity/types@^2.31.1":
   version "2.31.1"
   resolved "https://registry.npmjs.org/@sanity/types/-/types-2.31.1.tgz#c1c74dd8cc1f62e52cb41ccb129651210664c173"
-  integrity sha512-tx1/P9VXN57muSuX/vMIgZnmJmTAhgBRfbcSGdbbAf678tdQrR9qqh3yxqLqSXfmqR+9F7Hr7gOoWpYwx/H3DQ==
-  dependencies:
-    "@sanity/client" "^3.3.3"
-    "@sanity/color" "^2.1.14"
-    "@types/react" "^17.0.42"
-    rxjs "^6.5.3"
-
-"@sanity/types@^2.31.1":
-  version "2.31.1"
-  resolved "https://registry.yarnpkg.com/@sanity/types/-/types-2.31.1.tgz#c1c74dd8cc1f62e52cb41ccb129651210664c173"
   integrity sha512-tx1/P9VXN57muSuX/vMIgZnmJmTAhgBRfbcSGdbbAf678tdQrR9qqh3yxqLqSXfmqR+9F7Hr7gOoWpYwx/H3DQ==
   dependencies:
     "@sanity/client" "^3.3.3"
