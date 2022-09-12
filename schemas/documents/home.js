@@ -39,6 +39,13 @@ export default {
           title: "Secondary button link",
           type: "url",
         }),
+        basicSchema({
+          title: "Mobile image",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
       ],
     }),
     basicSchema({
@@ -70,6 +77,9 @@ export default {
             basicSchema({
               title: "Description",
               type: "text",
+            }),
+            basicSchema({
+              title: "Blocks name",
             }),
           ],
         }),
