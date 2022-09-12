@@ -1,14 +1,14 @@
 {
   "name": "latitudecms",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "package.json",
-  "author": "Adrián Porcel <adrian@reboot.studio>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "dev": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
   },
   "keywords": [
     "sanity"
