@@ -40,12 +40,13 @@ The project structure is the same found in any starter sanity project but with t
 ├── node_modules
 ├── plugins
 ├── schemas
-│ ├── castMember.js
-│ ├── crewMember.js
-│ ├── movie.js
-│ ├── person.js
+│ ├── documents
+│ │  └── movie.js
+│ │  └── person.js
+│ ├── objects
+│ │  └── seo.js
+│ │  └── button.js
 │ ├── schema.js
-│ └── screening.js
 ├── static
 │ └── project-logo.svg
 ├── package.json
