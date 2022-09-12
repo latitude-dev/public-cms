@@ -55,16 +55,26 @@ The project structure is the same found in any starter sanity project but with t
 ```
 
 - config - Holds the configuration files for the plugins you've installed. Out of the box, this folder will usually only contain a checksums file, which keeps track of whether the plugin has updated it's config format since the file was created.
+
 - dist - Build destination folder.
+
 - lib - A folder to place different utility and misc functions.
+
 - plugins - Holds all "local" plugins. By local, we mean plugins that are specific to your Studio. Shared plugins are installed to node_modules like other npm modules. By default, this folder doesn't contain anything.
+
 - schemas - Holds the data schema for your Studio. If you want the schema to reside elsewhere, just change the path specified in sanity.json.
+
   - documents - Contain schemas of type document.
   - objects - Contains schemas of type object.
+
 - static - A folder to place static assets such as images, files etc that are related to Sanity Studio itself. Assets that are part of your content should be uploaded via the assets API.
+
 - sanity.json - The main "configuration file" for your Studio. Defines which plugins to load, where your schema is located, the ID of your project etc.
+
 - doc-structure and desk-structure - Override the default doc and desk for custom ones defined in the js files.
+
 - yarn.lock - Locks your dependencies down to specific versions. We use yarn internally to manage dependencies.
+
 - Also, package.json and node_modules are present, just like any other Node.js project.
 
 ## Libraries
