@@ -188,13 +188,6 @@ export default {
       },
       fields: [
         basicSchema({
-          title: "Logo",
-          type: "image",
-          options: {
-            metadata: ["lqip"],
-          },
-        }),
-        basicSchema({
           title: "Title",
         }),
         basicSchema({
