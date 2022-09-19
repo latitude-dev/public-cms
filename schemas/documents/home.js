@@ -137,6 +137,49 @@ export default {
       ],
     }),
     basicSchema({
+      title: "Testimonials",
+      validation: (Rule) => Rule.required().min(1).max(4),
+      type: "array",
+      of: [
+        basicSchema({
+          title: "Testimonial",
+          type: "object",
+          fields: [
+            basicSchema({
+              title: "Content",
+            }),
+            basicSchema({
+              title: "Author",
+            }),
+            basicSchema({
+              title: "Author position",
+            }),
+            basicSchema({
+              title: "Photo",
+              type: "image",
+              options: {
+                metadata: ["lqip"],
+              },
+            }),
+            basicSchema({
+              title: "Logo active",
+              type: "image",
+              options: {
+                metadata: ["lqip"],
+              },
+            }),
+            basicSchema({
+              title: "Logo inactive",
+              type: "image",
+              options: {
+                metadata: ["lqip"],
+              },
+            }),
+          ],
+        }),
+      ],
+    }),
+    basicSchema({
       title: "DBT section",
       type: "object",
       options: {
