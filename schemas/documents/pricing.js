@@ -98,6 +98,15 @@ export default {
       ],
     }),
     basicSchema({
+      title: "Wildcard section",
+      type: "wildcardSection",
+      required: false,
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    }),
+    basicSchema({
       title: "FAQ section",
       type: "object",
       options: {

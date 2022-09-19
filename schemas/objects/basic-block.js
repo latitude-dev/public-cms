@@ -3,6 +3,7 @@ import { basicSchema } from "../../lib/helpers";
 const basicBlock = basicSchema({
   type: "array",
   title: "Basic block",
+  required: false,
   of: [
     {
       type: "block",

@@ -11,6 +11,7 @@ import seo from "./objects/seo";
 import button from "./objects/button";
 import pageLink from "./objects/page-link";
 import basicBlock from "./objects/basic-block";
+import wildcardSection from "./objects/wildcard-section";
 
 export default createSchema({
   name: "default",
@@ -23,5 +24,6 @@ export default createSchema({
     button,
     pageLink,
     basicBlock,
+    wildcardSection,
   ]),
 });

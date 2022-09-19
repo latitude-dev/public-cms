@@ -203,6 +203,10 @@ export default {
             }),
           ],
         }),
+        basicSchema({
+          title: "Wildcard section",
+          type: "wildcardSection",
+        }),
       ],
     }),
   ],
