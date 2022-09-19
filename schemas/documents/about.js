@@ -195,7 +195,7 @@ export default {
                     }),
                     basicSchema({
                       title: "Description",
-                      type: "text",
+                      type: "basicBlock",
                     }),
                   ],
                 }),
