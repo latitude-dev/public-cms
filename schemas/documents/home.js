@@ -46,6 +46,13 @@ export default {
             metadata: ["lqip"],
           },
         }),
+        basicSchema({
+          title: "Tablet image",
+          type: "image",
+          options: {
+            metadata: ["lqip"],
+          },
+        }),
       ],
     }),
     basicSchema({
