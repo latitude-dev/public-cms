@@ -13,6 +13,8 @@ const button = basicSchema({
         list: [
           { title: "Primary button", value: "primary" },
           { title: "Secondary button", value: "secondary" },
+          { title: "Ghost button", value: "ghost" },
+          { title: "White button", value: "white" },
           { title: "Link button", value: "link" },
         ],
       },

@@ -53,6 +53,36 @@ export default {
             metadata: ["lqip"],
           },
         }),
+        basicSchema({
+          title: "Video",
+          type: "object",
+          required: false,
+          options: {
+            collapsible: true,
+            collapsed: true,
+          },
+          fields: [
+            basicSchema({
+              title: "Button label",
+            }),
+            basicSchema({
+              title: "Button style",
+              options: {
+                list: [
+                  { title: "Primary button", value: "primary" },
+                  { title: "Secondary button", value: "secondary" },
+                  { title: "Ghost button", value: "ghost" },
+                  { title: "White button", value: "white" },
+                  { title: "Link button", value: "link" },
+                ],
+              },
+            }),
+            basicSchema({
+              title: "HTML",
+              type: "text",
+            }),
+          ],
+        }),
       ],
     }),
     basicSchema({
