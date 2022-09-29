@@ -140,7 +140,7 @@ export default {
         basicSchema({
           title: "Cards",
           type: "array",
-          validation: (Rule) => Rule.required().min(5).max(5),
+          validation: (Rule) => Rule.required().min(2).max(5),
           of: [
             basicSchema({
               title: "Card",
