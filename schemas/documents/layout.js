@@ -95,14 +95,6 @@ export default {
           type: "url",
         }),
         basicSchema({
-          title: "Privacy link",
-          type: "url",
-        }),
-        basicSchema({
-          title: "Terms link",
-          type: "url",
-        }),
-        basicSchema({
           title: "Logo",
           type: "image",
           options: {

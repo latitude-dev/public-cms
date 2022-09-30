@@ -36,4 +36,20 @@ export default () =>
             .documentId("98dd392b-2642-43a1-92e1-9253576aae29")
             .views([S.view.form()])
         ),
+      S.listItem()
+        .title("Privacy")
+        .child(
+          S.document()
+            .schemaType("privacy")
+            .documentId("ea8c0399-826b-4b95-863c-4849cd10a228")
+            .views([S.view.form()])
+        ),
+      S.listItem()
+        .title("Terms")
+        .child(
+          S.document()
+            .schemaType("terms")
+            .documentId("1e80a963-bb5d-4719-a2a2-27f1937a4516")
+            .views([S.view.form()])
+        ),
     ]);

@@ -6,6 +6,8 @@ import home from "./documents/home";
 import layout from "./documents/layout";
 import about from "./documents/about";
 import pricing from "./documents/pricing";
+import privacy from "./documents/privacy";
+import terms from "./documents/terms";
 // Object schemas
 import seo from "./objects/seo";
 import button from "./objects/button";
@@ -21,6 +23,8 @@ export default createSchema({
     about,
     layout,
     seo,
+    privacy,
+    terms,
     button,
     pageLink,
     basicBlock,
