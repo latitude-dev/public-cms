@@ -31,6 +31,10 @@ export default {
         basicSchema({
           title: "Primary button link",
           type: "url",
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ["http", "https", "mailto", "tel"],
+            }),
         }),
         basicSchema({
           title: "Secondary button",
@@ -38,6 +42,10 @@ export default {
         basicSchema({
           title: "Secondary button link",
           type: "url",
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ["http", "https", "mailto", "tel"],
+            }),
         }),
         basicSchema({
           title: "Mobile image",

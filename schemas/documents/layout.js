@@ -35,6 +35,10 @@ export default {
                 basicSchema({
                   title: "Link",
                   type: "url",
+                  validation: (Rule) =>
+                    Rule.uri({
+                      scheme: ["http", "https", "mailto", "tel"],
+                    }),
                 }),
               ],
             }),
@@ -65,6 +69,10 @@ export default {
                 basicSchema({
                   title: "Link",
                   type: "url",
+                  validation: (Rule) =>
+                    Rule.uri({
+                      scheme: ["http", "https", "mailto", "tel"],
+                    }),
                 }),
               ],
             }),
@@ -93,6 +101,10 @@ export default {
         basicSchema({
           title: "Button link",
           type: "url",
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ["http", "https", "mailto", "tel"],
+            }),
         }),
         basicSchema({
           title: "Logo",
@@ -119,6 +131,10 @@ export default {
                 basicSchema({
                   title: "Link",
                   type: "url",
+                  validation: (Rule) =>
+                    Rule.uri({
+                      scheme: ["http", "https", "mailto", "tel"],
+                    }),
                 }),
               ],
             }),
@@ -151,6 +167,10 @@ export default {
                         basicSchema({
                           title: "Link",
                           type: "url",
+                          validation: (Rule) =>
+                            Rule.uri({
+                              scheme: ["http", "https", "mailto", "tel"],
+                            }),
                         }),
                       ],
                     }),
