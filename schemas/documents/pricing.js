@@ -55,6 +55,10 @@ export default {
                 basicSchema({
                   title: "Button link",
                   type: "url",
+                  validation: (Rule) =>
+                    Rule.uri({
+                      scheme: ["http", "https", "mailto", "tel"],
+                    }),
                 }),
                 basicSchema({
                   title: "Benefits",
@@ -94,6 +98,10 @@ export default {
         basicSchema({
           title: "Button link",
           type: "url",
+          validation: (Rule) =>
+            Rule.uri({
+              scheme: ["http", "https", "mailto", "tel"],
+            }),
         }),
       ],
     }),
